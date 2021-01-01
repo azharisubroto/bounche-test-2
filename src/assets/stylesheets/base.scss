@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+  line-height: 1.4;
+}
+
+/* font-size by number */
+@for $i from 5 through 90 {
+  .text-#{$i},
+  *.text-#{$i} {
+      font-size: #{$i}px!important;
+  }
+}
+
+// Line height by number
+@for $i from 20 through 40 {
+  .lh-#{$i} {
+      line-height: #{$i}px!important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  @for $i from 5 through 70 {
+      .text-md-#{$i},
+      *.text-md-#{$i} {
+          font-size: #{$i}px!important;
+      }
+  }
+  @for $i from 20 through 40 {
+      .lh-md-#{$i} {
+          line-height: #{$i}px!important;
+      }
+  }
+}
