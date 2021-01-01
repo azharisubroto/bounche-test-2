@@ -92,6 +92,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta1",
-    "eslint-plugin-html": "^6.1.1"
+    "eslint-plugin-html": "^6.1.1",
+    "jarallax": "^1.12.5"
   }
 }

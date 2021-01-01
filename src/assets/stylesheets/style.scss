@@ -34,12 +34,26 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Italianplateno1expanded,sans-serif;
+  font-family: $family_1;
   font-weight: 700;
 }
 
 img {
   max-width: 100%;
+}
+
+.rds-8 {
+  border-radius: 8px!important;
+}
+
+.container {
+  @include media-breakpoint-up(xl) {
+    max-width: 1210px;
+  }
+}
+
+.content {
+  min-height: 3000px;
 }
 
 // HEADER
@@ -96,17 +110,14 @@ img {
 
 // General Button
 .ds-btn {
-  font-family: "Söhnemono kräftig", sans-serif;
-  border-style: solid;
-  border-width: 1px;
-  border-color: hsla(0,0%,100%,.08);
+  font-family: $family_2;
+  border: 1px solid hsla(0,0%,100%,.08);
   border-radius: 6px;
   background-color: hsla(0,0%,87.8%,.08);
   -webkit-transition: color .2s ease;
   transition: color .2s ease;
   color: #e0e0e0;
   text-decoration: none;
-  cursor: pointer;
   text-align: center;
   display: inline-block;
   font-size: 12px;
@@ -133,7 +144,7 @@ img {
   justify-content: center;
   align-items: stretch;
   background-color: #121212;
-  font-family: "Söhnemono kräftig", sans-serif;
+  font-family: $family_2;
 
   .ds-menu-wrapper {
     display: -webkit-box;
@@ -172,7 +183,7 @@ img {
       transition: color .2s ease;
       color: #fff;
       text-decoration: none;
-      cursor: pointer;
+
       text-align: center;
       letter-spacing: .28px;
 
@@ -277,21 +288,31 @@ img {
 // HERO
 .ds-hero {
   background-color: #050505;
-}
+  overflow: hidden;
 
-// Card
-.ds-card {
-  position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 388px;
-    padding: 12px;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+  .ds-portrait {
+    max-width: 590px;
+    margin: 0 0 0 auto;
+  }
+  
+  .ds-hero-img-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -299,29 +320,140 @@ img {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: hsla(0,0%,100%,.06);
-    border-radius: 12px;
-    background-color: #141414;
-    -webkit-transition: border-color .2s ease,background-color .2s ease;
-    transition: border-color .2s ease,background-color .2s ease;
-    text-decoration: none;
-    cursor: pointer;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(5%,#050505),color-stop(20%,rgba(5,5,5,0)));
+    background-image: linear-gradient(0deg,#050505 5%,rgba(5,5,5,0) 20%);
+  }
+}
 
-    .ds-card--thumbnail {
-      width: 100px;
-      height: 80px;
-      margin-right: 16px;
-      border-radius: 6px;
-      background-position: 50% 50%;
-      background-size: 115%;
-      background-repeat: no-repeat;
+.jarallax {
+    position: relative;
+    z-index: 0;
+    height: 100%;
+}
+
+// Parallax
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+// Card
+.ds-card {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  padding: 12px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid hsla(0,0%,100%,.06);
+  border-radius: 12px;
+  background-color: #141414;
+  -webkit-transition: border-color .2s ease,background-color .2s ease;
+  transition: border-color .2s ease,background-color .2s ease;
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    border-color: hsla(0,0%,100%,.08);
+    background-color: #292929;
+  }
+
+  // Thumbnail
+  .ds-card--thumbnail {
+    width: 100px;
+    height: 80px;
+    margin-right: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+    object-fit: cover;
+    
+    img {
+      width: 110%;
+      height: 110%;
       object-fit: cover;
-      
-      img {
-        width: 100%;
-        height: 100%;
-      }
     }
+  }
+
+  // Card detail
+  .ds-card--detail {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-family: $family_2;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.36px;
+
+    .ds-card--title {
+      font-family: $family_1;
+      color: #f90;
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+
+// LOGO BAR
+.ds-logo-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 10px 50px 10px;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  border-top: 1px solid #1c1c1c;
+  border-bottom: 1px solid #1c1c1c;
+  background-color: #0d0d0d;
+
+  img {
+    position: relative;
+    width: 90%;
+
+    &.billboard {
+      top: -2px
+    }
+
+    &.bloomberg {
+      top: 1px;
+    }
+
+    &.washpost {
+      width: 95%;
+    }
+  }
 }

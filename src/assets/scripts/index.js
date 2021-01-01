@@ -1,7 +1,13 @@
-// import { qs, qsa, $on, $delegate } from './utils';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../stylesheets/style.scss';
 import 'bootstrap/js/dist/dropdown';
+import { jarallax } from 'jarallax';
 
-// console.log('Hello!');
+/**
+ * Hero Prallax
+ * @method
+ */
+jarallax(document.querySelectorAll('.jarallax'), {
+  speed: 0.9,
+  disableParallax: /iPad|iPhone|iPod|Android/,
+});
