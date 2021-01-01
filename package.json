@@ -11,8 +11,8 @@
     "build": "webpack --mode=production --progress --display-error-details",
     "check-eslint-config": "eslint --print-config .eslintrc | eslint-config-prettier-check",
     "check-stylelint-config": "stylelint-config-prettier-check",
-    "lint-code": "eslint 'src/scripts/**/*.js'",
-    "lint-style": "stylelint 'src/stylesheets/**/*.{css,scss}'",
+    "lint-code": "eslint 'src/assets/scripts/**/*.js'",
+    "lint-style": "stylelint 'src/assets/stylesheets/**/*.{css,scss}'",
     "analyze": "webpack-bundle-analyzer ./stats.json"
   },
   "devDependencies": {
@@ -30,6 +30,7 @@
     "csso-webpack-plugin": "2.0.0-beta.1",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "file-loader": "^6.1.1",
@@ -92,7 +93,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta1",
-    "eslint-plugin-html": "^6.1.1",
-    "jarallax": "^1.12.5"
+    "flickity": "^2.2.1",
+    "jarallax": "^1.12.5",
+    "slick-slider": "^1.8.2"
   }
 }

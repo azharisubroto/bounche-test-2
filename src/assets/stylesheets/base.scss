@@ -1,5 +1,9 @@
 html {
   box-sizing: border-box;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
 }
 
 *,
@@ -8,10 +12,32 @@ html {
   box-sizing: inherit;
 }
 
+::-moz-selection {
+  background-color: #ffbe5c;
+  color: #472b00;
+}
+
+::selection {
+  background-color: #ffbe5c;
+  color: #472b00;
+}
+
 body {
-  background-color: #fff;
-  font-family: Roboto, sans-serif;
   line-height: 1.4;
+  letter-spacing: 0.15px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-feature-settings: 'kern';
+  font-feature-settings: 'kern';
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
 }
 
 /* font-size by number */

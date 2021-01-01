@@ -11,6 +11,12 @@
     "browser": true,
     "es6": true
   },
+  "plugins": ["html"],
+  "settings": {
+    "html/html-extensions": [".html"],
+    "html/indent": "+2",
+    "html/report-bad-indent": "error"
+  },
   "rules": {
     "no-console": ["warn", {
       "allow": ["warn", "error"]

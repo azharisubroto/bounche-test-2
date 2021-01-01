@@ -52,9 +52,9 @@ img {
   }
 }
 
-.content {
-  min-height: 3000px;
-}
+// .content {
+//   min-height: 3000px;
+// }
 
 // HEADER
 .ds-main-header {
@@ -454,6 +454,124 @@ img {
 
     &.washpost {
       width: 95%;
+    }
+  }
+}
+
+// FOOTER
+.ds-footer {
+  position: relative;
+  
+  .ds-footer--up {
+    padding-right: 50px;
+    padding-left: 50px;
+    border-top: 1px solid #171717;
+    border-bottom: 1px solid #171717;
+    background-color: #121212;
+
+    .footer-logo {
+      width: 192px;
+      height: 23px;
+    }
+
+    .ds-footer-menu-name {
+      margin-bottom: 28px;
+      color: #fff;
+      line-height: 22px;
+    }
+
+    .ds-footer-menu {
+      margin: 0;
+      padding: 0;
+      display: block;
+
+      li {
+        display: block;
+        margin-bottom: 28px;
+        border-bottom-style: none;
+        transition: color .2s ease;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: .14px;
+      }
+    }
+  }
+
+  .ds-footer--down {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: #121212;
+  }
+
+  a {
+    color: #b8b8b8;
+    text-decoration: none;
+    transition: color .2s ease;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+
+// SUBSCRIBE
+.ds-subscribe {
+  background-color: #0d0d0d;
+  .ds-formgroup {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 56px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-family: $family_3;
+
+    input {
+      height: 100%;
+      margin-bottom: 0px;
+      padding-right: 20px;
+      padding-left: 20px;
+      -webkit-box-flex: 1;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      background-color: transparent;
+      color: rgb(255, 255, 255);
+      letter-spacing: 0.24px;
+      flex: 1 1 0%;
+      border-style: solid;
+      border-width: 1.5px;
+      border-color: rgb(255, 255, 255);
+    }
+
+    button {
+      height: 100%;
+      padding-right: 20px;
+      padding-left: 20px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(5, 5, 5);
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.24px;
+      border-style: solid;
+      border-width: 1.5px;
+      border-color: rgb(255, 255, 255);
+      transition: opacity 0.2s ease 0s;
     }
   }
 }
