@@ -9,16 +9,15 @@ const production = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
-      minify: false,
-      // minify: {
-      //   removeComments: true,
-      //   collapseWhitespace: true,
-      //   removeRedundantAttributes: true,
-      //   useShortDoctype: true,
-      //   removeEmptyAttributes: true,
-      //   removeStyleLinkTypeAttributes: true,
-      //   keepClosingSlash: true,
-      // },
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+      },
     }),
     new StatsWriterPlugin({ fields: null, filename: '../stats.json' }),
     new WebpackAssetsManifest(),
