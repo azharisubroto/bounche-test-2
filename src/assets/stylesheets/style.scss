@@ -23,7 +23,7 @@ a {
   display: inline-block;
 
   &:hover {
-    color: $primary
+    color: $primary;
   }
 
   img {
@@ -33,7 +33,12 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $family_1;
   font-weight: 700;
 }
@@ -43,7 +48,7 @@ img {
 }
 
 .rds-8 {
-  border-radius: 8px!important;
+  border-radius: 8px !important;
 }
 
 .container {
@@ -68,13 +73,13 @@ img {
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #1c1c1c;
-    background-color: hsla(0,0%,9%,.92);
-    position: fixed;
+    background-color: hsla(0, 0%, 9%, 0.92);
     left: 0;
     right: 0;
     top: 0;
 
-    & > .container-fluid, & > .container-fluid > .row {
+    & > .container-fluid,
+    & > .container-fluid > .row {
       height: 50px;
     }
 
@@ -88,21 +93,21 @@ img {
 
       img {
         width: 50%;
-        filter: invert(100%)
+        filter: invert(100%);
       }
     }
   }
-  
+
   // Logo
   .ds-logo {
     width: 162px;
     svg {
-      transition: all .2s;
+      transition: all 0.2s;
       fill: #fff;
     }
     &:hover {
       svg {
-        fill: $primary
+        fill: $primary;
       }
     }
   }
@@ -111,11 +116,11 @@ img {
 // General Button
 .ds-btn {
   font-family: $family_2;
-  border: 1px solid hsla(0,0%,100%,.08);
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
   border-radius: 6px;
-  background-color: hsla(0,0%,87.8%,.08);
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
+  background-color: hsla(0, 0%, 87.8%, 0.08);
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
   color: #e0e0e0;
   text-decoration: none;
   text-align: center;
@@ -123,10 +128,10 @@ img {
   font-size: 12px;
   padding: 0 15px;
   height: 30px;
-  line-height: 30px;;
+  line-height: 30px;
 
   &:hover {
-    color: #8f8f8f
+    color: #8f8f8f;
   }
 }
 
@@ -179,26 +184,26 @@ img {
       align-items: center;
       border-bottom-style: none;
       background-color: transparent;
-      -webkit-transition: color .2s ease;
-      transition: color .2s ease;
+      -webkit-transition: color 0.2s ease;
+      transition: color 0.2s ease;
       color: #fff;
       text-decoration: none;
 
       text-align: center;
-      letter-spacing: .28px;
+      letter-spacing: 0.28px;
 
       &:hover {
-        color: $primary
+        color: $primary;
       }
 
       &.dropdown-toggle:after {
-        content:none;
+        content: none;
         display: none;
       }
     }
 
     // Dropdown
-    &>div {
+    & > div {
       width: 20%;
       text-align: center;
       position: relative;
@@ -215,19 +220,18 @@ img {
   }
 }
 
-
 .dropdown {
   position: relative;
 
   &:hover > button {
-    color: $primary
+    color: $primary;
   }
-  
+
   .ds-dropdown-menu {
     display: block;
     list-style: none;
     position: absolute;
-    margin: 0 auto!important;
+    margin: 0 auto !important;
     padding: 0;
     top: 100%;
     left: 0;
@@ -237,8 +241,9 @@ img {
     border: 1px solid #262626;
     border-radius: 8px;
     background-color: #171717;
-    transition: all .2s;
-    transform: translate3d(0px, -10px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)!important;
+    transition: all 0.2s;
+    transform: translate3d(0px, -10px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+      rotateZ(0deg) skew(0deg, 0deg) !important;
     transform-style: preserve-3d;
     opacity: 0;
     visibility: hidden;
@@ -261,11 +266,11 @@ img {
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
         background-color: #171717;
-        transition: color .2s ease;
+        transition: color 0.2s ease;
         color: #fff;
         text-align: center;
         &:hover {
-          color: $primary
+          color: $primary;
         }
       }
     }
@@ -275,14 +280,15 @@ img {
     .ds-dropdown-menu {
       opacity: 1;
       visibility: visible;
-      transform: translate3d(0px, 0, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)!important;
+      transform: translate3d(0px, 0, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+        skew(0deg, 0deg) !important;
     }
   }
 }
 
 // CONTENT
 .content {
-  border-top: 1px solid #1c1c1c
+  border-top: 1px solid #1c1c1c;
 }
 
 // HERO
@@ -294,7 +300,7 @@ img {
     max-width: 590px;
     margin: 0 0 0 auto;
   }
-  
+
   .ds-hero-img-overlay {
     position: absolute;
     left: 0;
@@ -325,15 +331,21 @@ img {
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
-    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(5%,#050505),color-stop(20%,rgba(5,5,5,0)));
-    background-image: linear-gradient(0deg,#050505 5%,rgba(5,5,5,0) 20%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(5%, #050505),
+      color-stop(20%, rgba(5, 5, 5, 0))
+    );
+    background-image: linear-gradient(0deg, #050505 5%, rgba(5, 5, 5, 0) 20%);
   }
 }
 
 .jarallax {
-    position: relative;
-    z-index: 0;
-    height: 100%;
+  position: relative;
+  z-index: 0;
+  height: 100%;
 }
 
 // Parallax
@@ -367,16 +379,16 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid hsla(0,0%,100%,.06);
+  border: 1px solid hsla(0, 0%, 100%, 0.06);
   border-radius: 12px;
   background-color: #141414;
-  -webkit-transition: border-color .2s ease,background-color .2s ease;
-  transition: border-color .2s ease,background-color .2s ease;
+  -webkit-transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
   text-decoration: none;
   color: #fff;
 
   &:hover {
-    border-color: hsla(0,0%,100%,.08);
+    border-color: hsla(0, 0%, 100%, 0.08);
     background-color: #292929;
   }
 
@@ -388,7 +400,7 @@ img {
     border-radius: 6px;
     overflow: hidden;
     object-fit: cover;
-    
+
     img {
       width: 110%;
       height: 110%;
@@ -423,7 +435,6 @@ img {
   }
 }
 
-
 // LOGO BAR
 .ds-logo-bar {
   position: relative;
@@ -445,7 +456,7 @@ img {
     width: 90%;
 
     &.billboard {
-      top: -2px
+      top: -2px;
     }
 
     &.bloomberg {
@@ -461,7 +472,7 @@ img {
 // FOOTER
 .ds-footer {
   position: relative;
-  
+
   .ds-footer--up {
     padding-right: 50px;
     padding-left: 50px;
@@ -489,11 +500,11 @@ img {
         display: block;
         margin-bottom: 28px;
         border-bottom-style: none;
-        transition: color .2s ease;
+        transition: color 0.2s ease;
         font-size: 14px;
         line-height: 20px;
         font-weight: 400;
-        letter-spacing: .14px;
+        letter-spacing: 0.14px;
       }
     }
   }
@@ -510,13 +521,12 @@ img {
   a {
     color: #b8b8b8;
     text-decoration: none;
-    transition: color .2s ease;
+    transition: color 0.2s ease;
     &:hover {
       color: #fff;
     }
   }
 }
-
 
 // SUBSCRIBE
 .ds-subscribe {
