@@ -55,8 +55,8 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: 'fonts',
-            outputPath: 'fonts',
+            publicPath: 'assets/fonts',
+            outputPath: 'assets/fonts',
             name: '[name].[hash:8].[ext]',
           },
         },
@@ -66,8 +66,8 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: 'images',
-            outputPath: 'images',
+            publicPath: 'assets/img',
+            outputPath: 'assets/img',
             name: '[name].[ext]',
           },
         },
@@ -76,7 +76,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'stylesheets/[name].[hash:8].css',
+      filename: 'assets/css/[name].[hash:8].css',
     }),
     new CopyWebpackPlugin({
       patterns: [
