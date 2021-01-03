@@ -119,6 +119,18 @@
   font-display: swap;
 }
 
+.ls-2 {
+  letter-spacing: 2px !important;
+}
+
+.ls-04 {
+  letter-spacing: 0.4px !important;
+}
+
+.ls-16 {
+  letter-spacing: 1.6px !important;
+}
+
 .family-1 {
   font-family: $family_1;
   letter-spacing: 0.24px;
@@ -132,4 +144,16 @@
 .family-3 {
   font-family: $family_3;
   letter-spacing: 0.15px;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
 }

@@ -5,16 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const development = {
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-      },
+      template: 'index.html'
     }),
   ],
   devtool: 'inline-source-map',

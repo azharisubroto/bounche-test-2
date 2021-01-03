@@ -76,7 +76,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'assets/css/[name].[hash:8].css',
+      filename: 'assets/css/app.css',
     }),
     new CopyWebpackPlugin({
       patterns: [

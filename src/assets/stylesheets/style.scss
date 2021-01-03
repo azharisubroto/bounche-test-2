@@ -4,6 +4,7 @@
 @import './fonts';
 @import './base';
 @import './animations';
+@import './slick-theme';
 
 // custom styles
 
@@ -25,12 +26,34 @@ a {
 
   &:hover {
     color: $primary;
+    .arrow-right {
+      &:before {
+        left: 2px;
+      }
+      &:after {
+        width: 8px;
+      }
+    }
   }
 
   img {
     display: inline-block;
     vertical-align: middle;
     width: 80px;
+  }
+}
+
+.link-arrow {
+  &:hover {
+    color: $primary;
+    .arrow-right {
+      &:before {
+        left: 2px;
+      }
+      &:after {
+        width: 8px;
+      }
+    }
   }
 }
 
@@ -50,6 +73,49 @@ h6 {
 
 img {
   max-width: 100%;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+// Arrow
+.arrow-right {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  margin-left: 8px;
+
+  &:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: 1px;
+    border-right: 2px solid $primary;
+    border-bottom: 2px solid $primary;
+    border-bottom-right-radius: 4px;
+    transform: rotate(-45deg);
+    transition: all 0.2s ease;
+  }
+  &:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: $primary;
+    border-radius: 90px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 1px;
+    transition: all 0.2s ease;
+  }
 }
 
 .rds-8 {
@@ -135,6 +201,23 @@ img {
 
   &:hover {
     color: #8f8f8f;
+  }
+}
+
+.ds-btn-big {
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 90px;
+  padding: 0 24px;
+  background: #ffffff;
+  color: #050505;
+  text-decoration: none;
+  font-family: $family_2;
+  transition: all 0.2s ease;
+  &:hover {
+    opacity: 0.72;
+    color: #050505;
   }
 }
 
@@ -387,8 +470,9 @@ img {
   background-color: #141414;
   -webkit-transition: border-color 0.2s ease, background-color 0.2s ease;
   transition: border-color 0.2s ease, background-color 0.2s ease;
-  text-decoration: none;
   color: #fff;
+  overflow: hidden;
+  text-decoration: none;
 
   &:hover {
     border-color: hsla(0, 0%, 100%, 0.08);
@@ -469,6 +553,382 @@ img {
     &.washpost {
       width: 95%;
     }
+  }
+}
+
+// NOTES SLIDESHOW
+.ds-notes {
+  background: #0d0d0d;
+}
+
+.ds-notes-slide {
+  .slick-slide {
+    padding: 0;
+  }
+  .slick-dots {
+    bottom: -30px;
+
+    li {
+      button {
+        position: relative;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        margin: 0 3px 0.5em;
+        transition: background-color 0.1s, color 0.1s;
+        border-radius: 90px;
+      }
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .slick-arrow {
+    &.slick-prev {
+      left: -60px;
+      right: auto;
+      background: #212121
+        url('https://assets-global.website-files.com/5f46baf9863467a01b1aaab9/5f479f086ab781da783039f6_left-chevron-white.svg')
+        no-repeat center center;
+    }
+    &.slick-next {
+      right: -40px;
+      left: auto;
+      background: #212121
+        url('https://assets-global.website-files.com/5f46baf9863467a01b1aaab9/5f479f08eb857727415068fc_right-chevron-white.svg')
+        no-repeat center center;
+    }
+    &:hover {
+      border-color: #474747;
+      background-color: #3d3d3d;
+    }
+    top: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    padding-left: 0;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background-color: #212121;
+    -webkit-transition: border-color 0.2s ease, background-color 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    font-size: 0;
+    z-index: 1000;
+    &:before {
+      content: '';
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
+
+// BIG CARD
+.ds-card-big {
+  position: relative;
+  border-radius: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  height: 100%;
+  background: #fff;
+}
+
+.ds-card-big--thumbnail {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  height: 24vh;
+  clear: none;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-image: url(../img/background-image.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  -o-object-fit: none;
+  object-fit: none;
+
+  .ds-play {
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 12px;
+    display: flex;
+    width: 126px;
+    height: 36px;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.44);
+    color: #fff;
+    text-decoration: none;
+
+    img {
+      width: 18px;
+      margin-right: 6px;
+    }
+
+    .ds-listen {
+      margin-top: 3px;
+      font-family: Italianplateno1expanded, sans-serif;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 700;
+      letter-spacing: 0.48px;
+    }
+  }
+}
+
+.ds-badge {
+  position: relative;
+  top: 12px;
+  width: 92px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.44);
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.64px;
+}
+
+.ds-card-big--content {
+  padding: 30px;
+  color: #000;
+  background-color: #fff;
+  padding-bottom: 70px;
+
+  h2 {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    font-family: Italianplateno1expanded, sans-serif;
+    color: #000;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: 0.24px;
+    text-decoration: none;
+  }
+
+  p {
+    margin-bottom: 8px;
+    font-family: 'Söhne buch', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-decoration: none;
+  }
+
+  &:hover h2 {
+    text-decoration: underline;
+  }
+
+  .primary-color.ls-04 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+// Key Features
+.ds-card-light {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-style: none;
+  border-radius: 16px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    .feature-icon {
+      background-color: $primary;
+    }
+    &,
+    p {
+      color: $primary;
+    }
+  }
+
+  .feature-icon {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    margin-right: auto;
+    margin-bottom: 16px;
+    margin-left: auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #000;
+    transition: all 0.2s;
+
+    img {
+      width: 18px;
+      border-radius: 0;
+    }
+  }
+
+  h4 {
+    transition: all 0.2s;
+  }
+
+  p {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    color: #000;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.32px;
+    transition: all 0.2s;
+    margin-bottom: 0;
+  }
+}
+
+// CTA CARDS
+.ds-big-cta-cards {
+  width: 100%;
+  padding-top: 50px;
+  border-top: 1px solid #1c1c1c;
+  background-color: #0d0d0d;
+}
+
+.ds-images-grid {
+  display: flex;
+  & > div:nth-child(1) {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    img:nth-child(1) {
+      border-radius: 0 12px 12px 0;
+    }
+    img:nth-child(2) {
+      border-radius: 0 12px 0 0;
+    }
+  }
+
+  & > div:nth-child(2) {
+    position: relative;
+    width: 35%;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    img:nth-child(1) {
+      border-radius: 12px;
+    }
+
+    img:nth-child(2) {
+      border-radius: 12px 12px 0 0;
+    }
+  }
+
+  & > div:nth-child(3) {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    img:nth-child(1) {
+      border-radius: 12px 0 0 12px;
+    }
+    img:nth-child(2) {
+      border-radius: 12px 0 0 0;
+    }
+  }
+
+  & > div {
+    position: relative;
+  }
+
+  img {
+    display: block;
+    margin-top: 15px;
   }
 }
 
