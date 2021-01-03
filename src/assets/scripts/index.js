@@ -53,6 +53,11 @@ $(document).ready(function () {
     ],
   })
 
+  // Button Click
+  $('button.menu').on('click', function () {
+    $('.ds-menu-wrapper').toggleClass('open')
+  })
+
   var rellax = new Rellax('.rellax', {
     center: true,
   })
