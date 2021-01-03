@@ -16,6 +16,8 @@ body {
   background: #121212;
   color: #fff;
   font-family: $family_1;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 a {
@@ -87,7 +89,7 @@ img {
   display: inline-block;
   top: 0;
   bottom: 0;
-  margin-left: 8px;
+  margin-left: 2px;
 
   &:before {
     content: '';
@@ -125,6 +127,10 @@ img {
 .container {
   @include media-breakpoint-up(xl) {
     max-width: 1210px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -474,9 +480,17 @@ img {
   overflow: hidden;
   text-decoration: none;
 
+  @include media-breakpoint-down(sm) {
+    &.btn {
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+
   &:hover {
     border-color: hsla(0, 0%, 100%, 0.08);
     background-color: #292929;
+    color: #fff;
   }
 
   // Thumbnail
@@ -564,6 +578,14 @@ img {
 .ds-notes-slide {
   .slick-slide {
     padding: 0;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 12.5px;
+    }
+
+    & > div {
+      height: 100%;
+    }
   }
   .slick-dots {
     bottom: -30px;
@@ -596,7 +618,7 @@ img {
         no-repeat center center;
     }
     &.slick-next {
-      right: -40px;
+      right: -60px;
       left: auto;
       background: #212121
         url('https://assets-global.website-files.com/5f46baf9863467a01b1aaab9/5f479f08eb857727415068fc_right-chevron-white.svg')
@@ -732,6 +754,10 @@ img {
   color: #000;
   background-color: #fff;
   padding-bottom: 70px;
+
+  @include media-breakpoint-up(lg) {
+    height: 440px;
+  }
 
   h2 {
     position: relative;
@@ -936,12 +962,51 @@ img {
 .ds-footer {
   position: relative;
 
+  .link-arrow {
+    .arrow-right {
+      top: 1px;
+      &:before {
+        border-color: #b8b8b8;
+      }
+      &:after {
+        background-color: #b8b8b8;
+      }
+    }
+
+    &:hover {
+      color: $primary;
+      .arrow-right {
+        &:before {
+          border-color: $primary;
+        }
+        &:after {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+
   .ds-footer--up {
     padding-right: 50px;
     padding-left: 50px;
     border-top: 1px solid #171717;
     border-bottom: 1px solid #171717;
     background-color: #121212;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .text-md-start {
+        br {
+          display: none;
+        }
+      }
+
+      .col {
+        margin-bottom: 15px;
+      }
+    }
 
     .footer-logo {
       width: 192px;
@@ -952,6 +1017,9 @@ img {
       margin-bottom: 28px;
       color: #fff;
       line-height: 22px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 15px;
+      }
     }
 
     .ds-footer-menu {
@@ -968,6 +1036,10 @@ img {
         line-height: 20px;
         font-weight: 400;
         letter-spacing: 0.14px;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 15px;
+        }
       }
     }
   }
@@ -1027,6 +1099,9 @@ img {
     flex-wrap: wrap;
     font-family: $family_3;
 
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
     input {
       height: 100%;
       margin-bottom: 0px;
@@ -1041,6 +1116,12 @@ img {
       border-style: solid;
       border-width: 1.5px;
       border-color: rgb(255, 255, 255);
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        flex: 1 1 100%;
+        border-radius: 8px 8px 0 0 !important;
+        height: 56px;
+      }
     }
 
     button {
@@ -1058,6 +1139,13 @@ img {
       border-width: 1.5px;
       border-color: rgb(255, 255, 255);
       transition: opacity 0.2s ease 0s;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        flex: 1 1 100%;
+        border-radius: 0 0 8px 8px !important;
+        height: 56px;
+        margin: 0;
+      }
     }
   }
 }

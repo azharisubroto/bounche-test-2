@@ -22,10 +22,35 @@ jarallax(document.querySelectorAll('.jarallax'), {
 $(document).ready(function () {
   $('.ds-notes-slide').slick({
     dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    fade: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          fade: false,
+          infinite: true,
+          dots: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: false,
+          infinite: true,
+          dots: true,
+          arrows: false,
+        },
+      },
+    ],
   })
 
   var rellax = new Rellax('.rellax', {
