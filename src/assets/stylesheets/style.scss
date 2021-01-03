@@ -196,6 +196,61 @@ img {
   }
 }
 
+// Search Dialog
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+#searchModal {
+  .modal-dialog {
+    max-width: 400px;
+  }
+}
+.ds-modal-search {
+  input.search-field-main {
+    height: 60px;
+    margin-bottom: 12px;
+    padding-right: 20px;
+    padding-left: 60px;
+    background-color: transparent;
+    background-image: url('https://assets-global.website-files.com/5f46baf9863467a01b1aaab9/5f46c0373f1d4c23583f5ed3_search-grey.svg') !important;
+    background-size: 20px;
+    font-family: $family_2;
+    letter-spacing: 0.12px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: rgb(38, 38, 38);
+    border-image: initial;
+    border-radius: 30px;
+    background-position: 20px 50%;
+    background-repeat: no-repeat;
+    color: #fff;
+    transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s;
+    outline: 0 !important;
+
+    &:focus,
+    &:active {
+      border-color: #262626;
+      background-color: #050505;
+      color: #fff;
+    }
+  }
+
+  .ds-search-btn {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(33, 33, 33);
+    font-family: $family_2;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(43, 43, 43);
+    border-image: initial;
+    border-radius: 30px;
+    transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s;
+  }
+}
+
 .menu {
   background-color: transparent;
   border: none;
@@ -639,6 +694,15 @@ img {
       margin: 0;
     }
   }
+}
+
+// Card Dark
+.ds-card-dark {
+  position: relative;
+  z-index: 1;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  background-color: #171717;
 }
 
 // LOGO BAR

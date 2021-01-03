@@ -4,6 +4,7 @@ import '../stylesheets/style.scss'
 
 import $ from 'jquery'
 import 'bootstrap/js/dist/dropdown'
+import 'bootstrap/js/dist/modal'
 import { jarallax } from 'jarallax'
 import 'slick-carousel'
 import '../../components/notes-card'
@@ -58,7 +59,7 @@ $(document).ready(function () {
     $('.ds-menu-wrapper').toggleClass('open')
   })
 
-  var rellax = new Rellax('.rellax', {
+  new Rellax('.rellax', {
     center: true,
   })
 })

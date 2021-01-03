@@ -89,7 +89,7 @@
 
           <!-- Search Button -->
           <div class="col-2 col-md-2 order-last order-md-first">
-            <div class="ds-btn ds-search">
+            <div class="ds-btn ds-search" data-bs-toggle="modal" data-bs-target="#searchModal">
               <img src="assets/img/search.svg" alt="search" loading="lazy" />
             </div>
           </div>
@@ -140,6 +140,30 @@
       </div>
     </div> <!-- .ds-nav-men -->
   </header> <!-- .ds-main-header -->
+
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" data-bs-keyboard="false" tabindex="-1" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-dialog-centered" style="z-index:1000">
+      <div class="modal-content ds-card-dark py-4">
+        <div class="px-4 pb-4">
+          <div class="text-14 text-center lh-23 family-2 px-3 mb-4">
+            Quickly find episodes, articles, and pages across the website.
+          </div>
+
+          <form action="/" class="ds-modal-search w-100 d-block pt-1">
+            <input type="search" class="w-100 search-field-main" autocomplete="off" autofocus="true" maxlength="256"
+              name="query" placeholder="Search…" id="search-field" required="">
+
+            <input type="submit" value="Search" class="ds-search-btn">
+          </form>
+        </div>
+
+        <hr>
+
+      </div>
+    </div>
+  </div>
 
   <!-- CONTENT WRAPPER -->
   <main class="ds-main-wrapper">
