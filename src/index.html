@@ -141,30 +141,6 @@
     </div> <!-- .ds-nav-men -->
   </header> <!-- .ds-main-header -->
 
-  <!-- Search Modal -->
-  <div class="modal fade" id="searchModal" data-bs-keyboard="false" tabindex="-1" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog modal-dialog-centered" style="z-index:1000">
-      <div class="modal-content ds-card-dark py-4">
-        <div class="px-4 pb-4">
-          <div class="text-14 text-center lh-23 family-2 px-3 mb-4">
-            Quickly find episodes, articles, and pages across the website.
-          </div>
-
-          <form action="/" class="ds-modal-search w-100 d-block pt-1">
-            <input type="search" class="w-100 search-field-main" autocomplete="off" autofocus="true" maxlength="256"
-              name="query" placeholder="Search…" id="search-field" required="">
-
-            <input type="submit" value="Search" class="ds-search-btn">
-          </form>
-        </div>
-
-        <hr>
-
-      </div>
-    </div>
-  </div>
-
   <!-- CONTENT WRAPPER -->
   <main class="ds-main-wrapper">
 
@@ -496,7 +472,61 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> <!-- .ds-subscribe -->
+
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" data-bs-keyboard="false" tabindex="-1" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-dialog-centered" style="z-index:1000">
+      <div class="modal-content ds-card-dark py-4">
+        <div class="px-4 pb-4 searchmodal-top">
+          <div class="text-14 text-center lh-23 family-2 px-3 mb-4">
+            Quickly find episodes, articles, and pages across the website.
+          </div>
+
+          <form action="/" class="ds-modal-search w-100 d-block pt-1">
+            <input type="search" class="w-100 search-field-main" autocomplete="off" autofocus="true" maxlength="256"
+              name="query" placeholder="Search…" id="search-field" required="">
+
+            <input type="submit" value="Search" class="ds-search-btn">
+          </form>
+        </div>
+
+        <div class="row px-md-4">
+          <div class="col-4">
+            <a href="#" class="ds-icon-link">
+              <img
+                src="https://assets-global.website-files.com/5f46baf9863467a01b1aaab9/5f48e96eee96f56ecaa77e0b_popular-white.svg"
+                loading="lazy" alt="" />
+            </a>
+            <div>
+              Popular
+            </div>
+          </div>
+          <div class="col-4">
+            <a href="#" class="ds-icon-link">
+              <img
+                src="https://assets-global.website-files.com/5f46baf9863467a01b1aaab9/5f54b4db31df4cefcc660906_latest-posts-white.svg"
+                loading="lazy" alt="" />
+            </a>
+            <div>
+              Popular
+            </div>
+          </div>
+          <div class="col-4">
+            <a href="#" class="ds-icon-link">
+              <img
+                src="https://assets-global.website-files.com/5f46baf9863467a01b1aaab9/5f54b4db31df4cefcc660906_latest-posts-white.svg"
+                loading="lazy" alt="" />
+            </a>
+            <div>
+              Browse All
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- #searchModal -->
 
   <!-- FOOTER -->
   <footer class="ds-footer family-3">
